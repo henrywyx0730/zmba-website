@@ -2,11 +2,11 @@
 
 ## Audit boundary
 
-Sources were read in place under the parent ZMBA source-material directory. No original file was moved, renamed, edited, converted, or copied into this repository. The data registry records only verified facts and source provenance; it intentionally does not import source media or private data.
+Sources were read in place under the parent ZMBA source-material directory. No original file was moved, renamed, edited, converted, or overwritten. The public implementation uses a small, curated set of working copies and non-destructive web derivatives inside `public/images`; the originals remain untouched. The data registry records source provenance and deliberately excludes private data.
 
 ## Brand asset
 
-- `ZMBA.jpg`: likely primary brand asset. JPEG, 1472 × 1452 pixels, near-square. It depicts a blue-and-gold shield with a school-building motif, `ZMBA`, `Zhong Mei Basketball Association`, and `2023`. It was inspected only; no logo redesign or asset import was performed.
+- `ZMBA.jpg`: likely primary brand asset. JPEG, 1472 × 1452 pixels, near-square. It depicts a blue-and-gold shield with a school-building motif, `ZMBA`, `Zhong Mei Basketball Association`, and `2023`. A resized working copy is used at `public/images/brand/zmba-mark.jpg`; the logo was not redesigned.
 
 ## Document classification
 
@@ -47,6 +47,21 @@ The first poster page specifies 29 May at 5:00 PM CST, Northern Basketball Court
 - Brand asset inspected: `ZMBA.jpg`.
 - Media inventoried: dated groups for 2023-05-25, 2023-06-01, 2024-05-24, 2025-04-03, 2025-04-27, 2025-05-29 All-Star, and 2025-10-09.
 - The All-Star PDF was visually reviewed from temporary renderings only; its three source pages were not altered.
+
+## Selected public working assets
+
+The following assets are deliberately limited to material needed by the first public release. Each has an entry in `src/content/zmba.ts` with its date, source path, public path, dimensions, media kind, and neutral alternative text.
+
+- Brand: one resized copy of `ZMBA.jpg`.
+- 2023-05-25: one resized court photograph.
+- 2023-06-01: one still extracted from the free-throw video.
+- 2024-05-24: one resized court photograph.
+- 2025-04-03: one still extracted from a dated video.
+- 2025-04-27: one resized court photograph.
+- 2025-05-29 All-Star: the verified first poster page only; roster pages were not copied.
+- 2025-10-09: two resized court photographs.
+
+No source video was transcoded for the site. No roster page, birthday record, profile headshot, or internal document was copied into the public asset tree.
 
 ## Explicitly excluded from repository content
 

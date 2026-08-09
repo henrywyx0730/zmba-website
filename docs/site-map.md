@@ -4,7 +4,7 @@
 
 ### Home
 
-The active official home: a concise introduction, current or next verified activity, and links to the association's core information. Until a full design/content pass, this remains a minimal placeholder.
+The active official home: a concise introduction, verified featured activity, current leadership, real court photography, and links to the association's core information.
 
 ### About
 
@@ -24,7 +24,7 @@ Approved public competition rules and a public-facing code of conduct. Governanc
 
 ### Media
 
-Approved photos, videos, and posters associated with verified events. Original source materials remain outside the repository and are never moved by the website.
+Approved working copies and web derivatives of selected photos, video stills, and posters grouped by verified date. Original source materials remain outside the repository and are never changed by the website.
 
 ## Possible future sections — only when real content supports them
 

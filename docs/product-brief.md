@@ -37,6 +37,8 @@ The following academic-year labels are a website organization aid, not historica
 - 2025–26
 - 2026–27
 
-## Initial scope
+## First public release
 
-The current public homepage is deliberately a minimal placeholder containing only the organization name and tagline. The factual data in `src/content/zmba.ts` and the documentation establish a safe base for future implementation; they do not authorize publication of every source record.
+The first real public release implements Home, About, Games, People, Rules, and Media. It presents the current organization before its history, gives Lucian priority as incumbent Commissioner, and uses Henry's founding role as continuity rather than nostalgia.
+
+The release uses a restrained court-side editorial system based on the real ZMBA mark, posters, outdoor-court colors, and event photography. Unknown event details are omitted instead of padded with archive copy or league-style statistics. Rules are classified on the site but are not downloadable until publication approval is confirmed. Social platform names may appear, but their links remain unset.

@@ -16,6 +16,7 @@ export type Organization = WithProvenance & {
   tagline: string;
   foundedYear: number;
   community: string;
+  communityChinese: string;
   officialDomain: string;
 };
 
@@ -56,6 +57,8 @@ export type EventRecord = WithProvenance & {
   seasonId: string;
   title: string | null;
   eventType: string | null;
+  location: string | null;
+  format: readonly string[] | null;
   result: string | null;
   honors: readonly string[] | null;
   participantStatus: "not-established" | "source-present-review-required";
@@ -73,7 +76,20 @@ export type DocumentRecord = WithProvenance & {
 
 export type SocialChannel = WithProvenance & {
   platform: "Instagram" | "Xiaohongshu" | "Douyin" | "Bilibili";
-  url: null;
+  url: string | null;
+};
+
+export type PublicMedia = WithProvenance & {
+  id: string;
+  eventId: string;
+  date: string;
+  seasonId: string;
+  publicPath: string;
+  sourcePath: string;
+  alt: string;
+  kind: "photo" | "video-still" | "poster-page";
+  width: number;
+  height: number;
 };
 
 const externalSourceRoot = "../";
@@ -100,6 +116,7 @@ export const zmbaContent = {
     tagline: "Not just a game. It's a legacy.",
     foundedYear: 2023,
     community: "Jinling High School ZhongMei",
+    communityChinese: "金陵中美",
     officialDomain: "https://zmbasketball.org",
     status: "verified",
     sources: [source("project brief", "Confirmed project information")],
@@ -112,7 +129,7 @@ export const zmbaContent = {
       chineseName: "吴昱贤",
       title: "Founder & 1st Commissioner",
       ordinal: 1,
-      term: "May 2023–May 2025",
+      term: "May 2023-May 2025",
       incumbent: false,
       status: "verified",
       sources: [source("ZMBA图鉴.docx", "Leadership profile")],
@@ -123,7 +140,7 @@ export const zmbaContent = {
       chineseName: "鲁东言",
       title: "2nd Commissioner",
       ordinal: 2,
-      term: "May 2025–present",
+      term: "May 2025-present",
       incumbent: true,
       status: "verified",
       sources: [
@@ -143,28 +160,28 @@ export const zmbaContent = {
     },
     {
       id: "2023-24",
-      label: "2023–24",
+      label: "2023-24",
       kind: "academic-year",
       status: "website-taxonomy",
       sources: [source("project brief", "Website taxonomy; not a historical formal-season claim")],
     },
     {
       id: "2024-25",
-      label: "2024–25",
+      label: "2024-25",
       kind: "academic-year",
       status: "website-taxonomy",
       sources: [source("project brief", "Website taxonomy; not a historical formal-season claim")],
     },
     {
       id: "2025-26",
-      label: "2025–26",
+      label: "2025-26",
       kind: "academic-year",
       status: "website-taxonomy",
       sources: [source("project brief", "Website taxonomy; not a historical formal-season claim")],
     },
     {
       id: "2026-27",
-      label: "2026–27",
+      label: "2026-27",
       kind: "academic-year",
       status: "website-taxonomy",
       sources: [source("project brief", "Website taxonomy; not a historical formal-season claim")],
@@ -178,6 +195,8 @@ export const zmbaContent = {
       seasonId: "founding-era",
       title: null,
       eventType: null,
+      location: null,
+      format: null,
       result: null,
       honors: null,
       participantStatus: "not-established",
@@ -192,6 +211,8 @@ export const zmbaContent = {
       seasonId: "founding-era",
       title: null,
       eventType: null,
+      location: null,
+      format: null,
       result: null,
       honors: null,
       participantStatus: "not-established",
@@ -209,6 +230,8 @@ export const zmbaContent = {
       seasonId: "2023-24",
       title: null,
       eventType: null,
+      location: null,
+      format: null,
       result: null,
       honors: null,
       participantStatus: "not-established",
@@ -226,6 +249,8 @@ export const zmbaContent = {
       seasonId: "2024-25",
       title: null,
       eventType: null,
+      location: null,
+      format: null,
       result: null,
       honors: null,
       participantStatus: "not-established",
@@ -245,6 +270,8 @@ export const zmbaContent = {
       seasonId: "2024-25",
       title: null,
       eventType: null,
+      location: null,
+      format: null,
       result: null,
       honors: null,
       participantStatus: "not-established",
@@ -261,6 +288,8 @@ export const zmbaContent = {
       seasonId: "2024-25",
       title: "2025 ZMB All-Star Game",
       eventType: "All-Star Game",
+      location: "Northern Basketball Court",
+      format: ["Five 10-minute periods", "Boys' 5v5", "Girls' 3v3"],
       result: null,
       honors: null,
       participantStatus: "source-present-review-required",
@@ -280,6 +309,8 @@ export const zmbaContent = {
       seasonId: "2025-26",
       title: null,
       eventType: null,
+      location: null,
+      format: null,
       result: null,
       honors: null,
       participantStatus: "not-established",
@@ -322,7 +353,7 @@ export const zmbaContent = {
 
   socialChannels: [
     "Instagram", "Xiaohongshu", "Douyin", "Bilibili",
-  ].map((platform) => ({ platform: platform as SocialChannel["platform"], url: null, status: "verified" as const, sources: [source("project brief", "Confirmed platform; URL not supplied")] })),
+  ].map((platform): SocialChannel => ({ platform: platform as SocialChannel["platform"], url: null, status: "verified", sources: [source("project brief", "Confirmed platform; URL not supplied")] })),
 } as const;
 
 /**
@@ -332,3 +363,118 @@ export const zmbaContent = {
 export const media = zmbaContent.events.flatMap((event) =>
   event.media.map((asset) => ({ ...asset, eventId: event.id })),
 );
+
+export const publicMedia = [
+  {
+    id: "2023-05-25-court",
+    eventId: "2023-05-25",
+    date: "2023-05-25",
+    seasonId: "founding-era",
+    publicPath: "/images/events/2023-05-25-court.jpg",
+    sourcePath: "2023.5.25.JPG",
+    alt: "ZMBA group photograph on the outdoor basketball court, dated May 25, 2023.",
+    kind: "photo",
+    width: 1600,
+    height: 1200,
+    status: "verified",
+    sources: [source("2023.5.25.JPG", "Web-sized derivative approved for this public implementation")],
+  },
+  {
+    id: "2023-06-01-free-throw",
+    eventId: "2023-06-01",
+    date: "2023-06-01",
+    seasonId: "founding-era",
+    publicPath: "/images/events/2023-06-01-free-throw.jpg",
+    sourcePath: "2023.6.1罚球.MP4",
+    alt: "Video still of a free throw on the outdoor basketball court, dated June 1, 2023.",
+    kind: "video-still",
+    width: 1280,
+    height: 720,
+    status: "verified",
+    sources: [source("2023.6.1罚球.MP4", "One-second video still approved for this public implementation")],
+  },
+  {
+    id: "2024-05-24-court",
+    eventId: "2024-05-24",
+    date: "2024-05-24",
+    seasonId: "2023-24",
+    publicPath: "/images/events/2024-05-24-court.jpg",
+    sourcePath: "2024.5.24/38C4AD68DB704DD301E635A9A7258D21.PNG",
+    alt: "ZMBA group photograph beside the outdoor court, dated May 24, 2024.",
+    kind: "photo",
+    width: 1600,
+    height: 1200,
+    status: "verified",
+    sources: [source("2024.5.24/38C4AD68DB704DD301E635A9A7258D21.PNG", "Web-sized derivative approved for this public implementation")],
+  },
+  {
+    id: "2025-04-03-court",
+    eventId: "2025-04-03",
+    date: "2025-04-03",
+    seasonId: "2024-25",
+    publicPath: "/images/events/2025-04-03-court.jpg",
+    sourcePath: "2025.4.3/2b21a5db5641b2432c8faf00e248ddc9.mp4",
+    alt: "Video still of basketball activity on the outdoor courts, dated April 3, 2025.",
+    kind: "video-still",
+    width: 1280,
+    height: 720,
+    status: "verified",
+    sources: [source("2025.4.3/2b21a5db5641b2432c8faf00e248ddc9.mp4", "One-second video still approved for this public implementation")],
+  },
+  {
+    id: "2025-04-27-court",
+    eventId: "2025-04-27",
+    date: "2025-04-27",
+    seasonId: "2024-25",
+    publicPath: "/images/events/2025-04-27-court.jpg",
+    sourcePath: "2025.4.27/IMG_20250427_170230.jpg",
+    alt: "Basketball play on the outdoor court, dated April 27, 2025.",
+    kind: "photo",
+    width: 1800,
+    height: 1350,
+    status: "verified",
+    sources: [source("2025.4.27/IMG_20250427_170230.jpg", "Web-sized derivative approved for this public implementation")],
+  },
+  {
+    id: "2025-05-29-all-star-poster",
+    eventId: "2025-05-29-all-star",
+    date: "2025-05-29",
+    seasonId: "2024-25",
+    publicPath: "/images/events/2025-05-29-all-star-poster.jpg",
+    sourcePath: "2025.5.29 All-Star/All Star Poster.pdf#page=1",
+    alt: "First page of the 2025 ZMB All-Star Game poster.",
+    kind: "poster-page",
+    width: 1000,
+    height: 1254,
+    status: "verified",
+    sources: [source("2025.5.29 All-Star/All Star Poster.pdf", "Public event-information page rendered as a web image; roster pages omitted")],
+  },
+  {
+    id: "2025-10-09-court-01",
+    eventId: "2025-10-09",
+    date: "2025-10-09",
+    seasonId: "2025-26",
+    publicPath: "/images/events/2025-10-09-court-01.jpg",
+    sourcePath: "2025.10.9/IMG_7185.JPG",
+    alt: "Basketball play on the outdoor court, dated October 9, 2025.",
+    kind: "photo",
+    width: 1200,
+    height: 1800,
+    status: "verified",
+    sources: [source("2025.10.9/IMG_7185.JPG", "Web-sized derivative approved for this public implementation")],
+  },
+  {
+    id: "2025-10-09-court-02",
+    eventId: "2025-10-09",
+    date: "2025-10-09",
+    seasonId: "2025-26",
+    publicPath: "/images/events/2025-10-09-court-02.jpg",
+    sourcePath: "2025.10.9/IMG_7183.JPG",
+    alt: "A player with the ball on the outdoor court, dated October 9, 2025.",
+    kind: "photo",
+    width: 1200,
+    height: 1800,
+    status: "verified",
+    sources: [source("2025.10.9/IMG_7183.JPG", "Web-sized derivative approved for this public implementation")],
+  },
+] satisfies readonly PublicMedia[];

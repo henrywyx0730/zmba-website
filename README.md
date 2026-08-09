@@ -15,14 +15,19 @@ ZMBA remains active. This project is not archive-first: historical material supp
 ## Repository content foundation
 
 - `src/content/zmba.ts`: typed, source-aware data registry for organization facts, leadership, website taxonomy, incomplete events, documents, media, and unset social channels.
+- `src/app`: public Home, About, Games, People, Rules, and Media routes.
+- `public/images`: approved working copies and web derivatives of selected real ZMBA material, with provenance retained in the data registry.
 - `docs/product-brief.md`: active-product definition and publishing guardrails.
 - `docs/site-map.md`: primary navigation direction.
 - `docs/content-inventory.md`: source audit, event/media mapping, document classification, and privacy decisions.
 
-Original ZMBA source materials live outside this repository and must not be moved, renamed, rewritten, or converted by the website. Do not publish unverified information, private student data, or social URLs that ZMBA has not supplied.
+Original ZMBA source materials live outside this repository and must not be moved, renamed, rewritten, or converted in place. The website uses selected copies or non-destructive derivatives inside `public/images`. Do not publish unverified information, private student data, or social URLs that ZMBA has not supplied.
 
 ## Development
 
 ```bash
+npm run dev
 npm run build
 ```
+
+No database, CMS, authentication, analytics, or fabricated league-data layer is used.
