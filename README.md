@@ -1,20 +1,28 @@
 # ZMBA Official Website
 
-Official website and historical archive of the ZhongMei Basketball Association.
+The active official website for the ZhongMei Basketball Association (ZMBA), a student-led basketball association in the Jinling High School ZhongMei community.
 
-## Domain
+ZMBA remains active. This project is not archive-first: historical material supports the current organization, its future games, its people, its rules, and its media.
 
-https://zmbasketball.org
+## Verified identity
 
-## Purpose
+- Founded: 2023
+- Tagline: Not just a game. It's a legacy.
+- Founder & 1st Commissioner: Henry Wu / 吴昱贤
+- Incumbent 2nd Commissioner: Lucian / 鲁东言
+- Official domain: https://zmbasketball.org
 
-The website will serve as:
+## Repository content foundation
 
-- the official home of ZMBA
-- a historical archive of seasons, games, people, and major events
-- a permanent home for ZMBA rules, documents, honors, and media
-- a record of the league's leadership and legacy
+- `src/content/zmba.ts`: typed, source-aware data registry for organization facts, leadership, website taxonomy, incomplete events, documents, media, and unset social channels.
+- `docs/product-brief.md`: active-product definition and publishing guardrails.
+- `docs/site-map.md`: primary navigation direction.
+- `docs/content-inventory.md`: source audit, event/media mapping, document classification, and privacy decisions.
 
-## Project Status
+Original ZMBA source materials live outside this repository and must not be moved, renamed, rewritten, or converted by the website. Do not publish unverified information, private student data, or social URLs that ZMBA has not supplied.
 
-Initial planning and content organization.
+## Development
+
+```bash
+npm run build
+```

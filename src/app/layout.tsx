@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | ZMBA",
   },
   description:
-    "The official website and historical archive of the ZhongMei Basketball Association.",
+    "The active official website of the ZhongMei Basketball Association.",
   applicationName: "ZMBA",
 };
 

@@ -1,54 +1,56 @@
-# ZMBA Content Inventory
+# ZMBA Content Inventory and Factual Audit
 
-This file tracks materials that may be added to the website.
+## Audit boundary
 
-## Branding
+Sources were read in place under the parent ZMBA source-material directory. No original file was moved, renamed, edited, converted, or copied into this repository. The data registry records only verified facts and source provenance; it intentionally does not import source media or private data.
 
-- [ ] Primary ZMBA logo
-- [ ] Alternate logo versions
-- [ ] Official colors
-- [ ] Fonts
-- [ ] Tagline artwork
+## Brand asset
 
-## Organization
+- `ZMBA.jpg`: likely primary brand asset. JPEG, 1472 × 1452 pixels, near-square. It depicts a blue-and-gold shield with a school-building motif, `ZMBA`, `Zhong Mei Basketball Association`, and `2023`. It was inspected only; no logo redesign or asset import was performed.
 
-- [ ] Founding date
-- [ ] Founding story
-- [ ] Official Chinese and English names
-- [ ] Mission statement
-- [ ] Values
-- [ ] Commissioner history
+## Document classification
 
-## Seasons and Games
+| Source | Findings | Publication classification |
+| --- | --- | --- |
+| `ZMBA 25-26赛季规则手册.docx` | Bilingual competition rules: fouls, violations, technical/unsportsmanlike/flagrant/disqualifying fouls, challenges, and officiating authority. | Candidate public competition rules, subject to confirmation that this edition is current and approved for web publication. |
+| `ZMBA群规行为准则(2025 Edition).docx` | Community expectations: respect, civil discussion, anti-harassment/discrimination, consequences, and appeals. | Candidate public code of conduct. Administrative enforcement details should be reviewed before publication. |
+| `Handbook for ZMBA Commissioner (2025 Edition).docx` | Succession, event operations, social-media workflow, photo watermarking, archival practice, and team-role recommendations. It also contains account identifiers and login/transfer instructions. | Governance/internal commissioner guidance. Never publish credentials, account-management details, phone-binding instructions, or other operational access information. |
+| `ZMBA图鉴.docx` | Two leadership/player profiles: Henry Wu / 吴昱贤 and Lucian / 鲁东言. Fields include name, basketball position, active period, title, prose player bio, technical strengths/weaknesses, and honors/roles. | Supports a People section for confirmed leadership names, titles, and service periods. Player evaluations, positions, detailed bios, and other profile fields need explicit approval from the people concerned before publication. |
+| `Birthdays.xlsx` | One sheet (`Sheet1`), 48 rows (47 data rows), with date/year/name columns. | Private personal-data roster. Birthday values and names are excluded from all website source files and public content. |
 
-- [ ] Season list
-- [ ] Game dates
-- [ ] Teams and rosters
-- [ ] Scores
-- [ ] MVPs
-- [ ] Game recaps
-- [ ] Posters
-- [ ] Photos and videos
+## Leadership facts supported by source review
 
-## People
+- Henry Wu / 吴昱贤: Founder & 1st Commissioner. The profile records a May 2023–May 2025 active period.
+- Lucian / 鲁东言: 2nd Commissioner. The profile records a May 2025–present active period; the product brief treats Lucian as incumbent based on confirmed project information.
 
-- [ ] Commissioners
-- [ ] Players
-- [ ] Referees
-- [ ] Organizers
-- [ ] Contributors
+## Evidence-based event and media mapping
 
-## Documents
+The date labels below use folder/filename evidence. Where source material does not establish an event's name, format, result, or participants, those fields remain unknown.
 
-- [ ] Rulebook
-- [ ] Commissioner Handbook
-- [ ] Code of Conduct
-- [ ] Announcements
-- [ ] Historical records
+| Source group | Website taxonomy | Evidence-backed event type | Available media | Known participants/result/honors | Still requires confirmation |
+| --- | --- | --- | --- | --- | --- |
+| 2023-05-25 | Founding Era / Inaugural Events | Unknown; dated photograph only | 1 JPG photo | None established | Event name/type, participants, location, result, honors, publication approval |
+| 2023-06-01 | Founding Era / Inaugural Events | Unknown; a video filename references free throws, but does not establish a complete event | 1 JPG photo, 1 MP4 video | None established | Event name/type, participants, location, result, honors, publication approval |
+| 2024-05-24 | 2023–24 | Unknown; dated folder only | 2 PNG files (their file signatures identify them as JPEG image data) | None established | Event name/type, participants, location, result, honors, publication approval |
+| 2025-04-03 | 2024–25 | Unknown; dated folder only | 4 MP4 videos and 1 PNG named `Background.png` | None established | Event name/type, role of background image, participants, location, result, honors, publication approval |
+| 2025-04-27 | 2024–25 | Unknown; dated folder only | 11 photos (10 JPG, 1 PNG) | None established | Event name/type, participants, location, result, honors, publication approval |
+| 2025-05-29 All-Star | 2024–25 | 2025 ZMB All-Star Game, established by poster | 1 three-page PDF poster; 2 JPG photos; 1 HEIC photo | Poster identifies an All-Star roster, host/referee, and a postgame award ceremony. The roster and headshots are not imported pending publication clearance. No final result or honors are supplied. | Exact participant-publication approval, final result, awards/honors, photo publication approval |
+| 2025-10-09 | 2025–26 | Unknown; dated folder only | 5 JPG photos | None established | Event name/type, participants, location, result, honors, publication approval |
 
-## Special Events
+### Additional All-Star poster evidence
 
-- [ ] Silent Hoops: Bounded by Basketball
-- [ ] Commissioner transitions
-- [ ] Championship games
-- [ ] Other major ZMBA moments
+The first poster page specifies 29 May at 5:00 PM CST, Northern Basketball Court, five 10-minute periods, boys' 5v5 in periods 1/2/4/5, girls' 3v3 in period 3, and a postgame award ceremony. Its explicit roster is source evidence, but individual roster names, photographs, and school-year information are deliberately not imported into the public data model pending consent and publication approval.
+
+## Source inventory
+
+- Documents inspected: four DOCX files listed in the classification table and `Birthdays.xlsx`.
+- Brand asset inspected: `ZMBA.jpg`.
+- Media inventoried: dated groups for 2023-05-25, 2023-06-01, 2024-05-24, 2025-04-03, 2025-04-27, 2025-05-29 All-Star, and 2025-10-09.
+- The All-Star PDF was visually reviewed from temporary renderings only; its three source pages were not altered.
+
+## Explicitly excluded from repository content
+
+- Birthday dates, years, and roster names from `Birthdays.xlsx`.
+- Account identifiers, passwords, binding/transfer steps, and other access details from the commissioner handbook.
+- Unapproved player evaluations, physical/skill assessments, headshots, class-year labels, and roster data from `ZMBA图鉴.docx` and the All-Star poster.
+- Guessed scores, teams, MVPs, event descriptions, venues, or social URLs.

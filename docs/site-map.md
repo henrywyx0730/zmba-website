@@ -1,70 +1,44 @@
 # ZMBA Website — Initial Site Map
 
-## Home
+## Primary navigation
 
-- Main introduction
-- ZMBA logo and tagline
-- Featured historical moments
-- Latest or selected games
-- Key organization statistics
+### Home
 
-## About
+The active official home: a concise introduction, current or next verified activity, and links to the association's core information. Until a full design/content pass, this remains a minimal placeholder.
 
-- What ZMBA is
-- Founding story
-- Mission and values
-- How the association operates
+### About
 
-## History
+What ZMBA is, its Jinling High School ZhongMei community, founding context, values, and leadership continuity.
 
-- Organization timeline
-- Major milestones
-- Commissioner transitions
-- Important events
+### Games
 
-## Seasons
+Verified upcoming and past games/events. Each entry must tolerate missing score, teams, participants, venue, recap, and honors fields.
 
-- Season overview
-- Games
-- Rosters
-- Results
-- Awards
-- Photos
+### People
 
-## Games
+Commissioners and, only with appropriate review, public-safe profiles of organizers, players, referees, and contributors.
 
-- Matchups
-- Scores
-- Game recaps
-- MVPs
-- Media
+### Rules
 
-## People
+Approved public competition rules and a public-facing code of conduct. Governance guidance remains separate and private by default.
 
-- Commissioners
-- Players
-- Referees
-- Organizers
-- Contributors
+### Media
 
-## Honors
+Approved photos, videos, and posters associated with verified events. Original source materials remain outside the repository and are never moved by the website.
 
-- Champions
-- MVPs
-- Individual awards
-- Special recognitions
+## Possible future sections — only when real content supports them
 
-## Documents
+- News
+- Contact
+- Archive
+- Statistics
+- Teams
 
-- Rulebook
-- Commissioner Handbook
-- Code of Conduct
-- Official announcements
+Archive is not a primary product concept. It may later support the active organization, but must not displace the current association, games, people, rules, or media.
 
-## Archive
+## Content and publication rules
 
-- Photos
-- Posters
-- Historical posts
-- Original documents
-- Media coverage
+- Do not publish a page merely because a folder or filename exists.
+- Keep academic-year labels as website taxonomy rather than retrospective formal-season claims.
+- Do not publish social links until ZMBA supplies their exact URLs.
+- Do not publish personal information, internal operating details, or student profiles without an explicit publication decision.
