@@ -11,8 +11,12 @@ export const metadata: Metadata = {
     template: "%s | ZMBA",
   },
   description:
-    "The active official website of the ZhongMei Basketball Association at Jinling High School ZhongMei.",
+    "The active official website of the ZhongMei Basketball Association at Jinling High School ZMB.",
   applicationName: "ZMBA",
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
     canonical: "/",
   },
@@ -22,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "ZMBA",
     title: "ZMBA | ZhongMei Basketball Association",
     description:
-      "Student-led basketball at Jinling High School ZhongMei, active since 2023.",
+      "Student-led basketball at Jinling High School ZMB, active since 2023.",
     images: [
       {
         url: "/images/events/2023-05-25-court.jpg",
@@ -33,7 +37,7 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: "/images/brand/zmba-mark.jpg",
+    icon: "/images/brand/zmba-mark-transparent.png",
   },
 };
 

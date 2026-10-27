@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const navigation = [
   { href: "/", label: "Home" },
@@ -17,20 +17,37 @@ const navigation = [
 export function SiteHeader() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    if (!menuOpen) {
+      return;
+    }
+
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [menuOpen]);
 
   return (
     <header className="site-header">
       <div className="header-inner">
         <Link className="brand-link" href="/" aria-label="ZMBA home">
           <Image
-            src="/images/brand/zmba-mark.jpg"
+            src="/images/brand/zmba-mark-transparent.png"
             alt="ZMBA shield"
-            width={54}
-            height={53}
+            width={230}
+            height={227}
             priority
           />
           <span className="brand-wordmark">ZMBA</span>
@@ -55,6 +72,7 @@ export function SiteHeader() {
         </nav>
 
         <button
+          ref={menuButtonRef}
           className="menu-button"
           type="button"
           aria-expanded={menuOpen}
@@ -84,6 +102,7 @@ export function SiteHeader() {
               key={item.href}
               aria-current={active ? "page" : undefined}
               tabIndex={menuOpen ? undefined : -1}
+              onClick={() => setMenuOpen(false)}
             >
               {item.label}
             </Link>

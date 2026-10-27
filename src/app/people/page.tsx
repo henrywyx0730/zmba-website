@@ -1,59 +1,38 @@
 import type { Metadata } from "next";
+import { Commissioners } from "@/components/commissioners";
 import { PageIntro } from "@/components/page-intro";
-import { zmbaContent } from "@/content/zmba";
+import styles from "@/components/page.module.css";
 
 export const metadata: Metadata = {
   title: "People",
+  description: "The Commissioners of the ZhongMei Basketball Association, from its founding to today.",
   alternates: { canonical: "/people" },
+  openGraph: {
+    title: "People | ZMBA",
+    description: "The Commissioners of the ZhongMei Basketball Association, from its founding to today.",
+    url: "/people",
+  },
 };
 
 export default function PeoplePage() {
-  const incumbent = zmbaContent.people.find((person) => person.id === "lucian");
-  const founder = zmbaContent.people.find((person) => person.id === "henry-wu");
-  const incumbentTerm = zmbaContent.commissioners.find((person) => person.id === "lucian")?.term;
-  const founderTerm = zmbaContent.commissioners.find((person) => person.id === "henry-wu")?.term;
-
-  if (!incumbent || !founder) {
-    return null;
-  }
-
   return (
-    <>
+    <div className={styles.page}>
       <PageIntro
-        label="People"
-        title="Current leadership first. The founder remains part of the story."
-        body="ZMBA's leadership record is deliberately concise. Only confirmed public roles are shown."
+        title="People"
+        body="The Commissioners of ZMBA, from its founding to today."
       />
 
-      <section className="people-stage content-width">
-        <article className="person-primary">
-          <p className="person-role">Current Commissioner</p>
-          <h2>{incumbent.name}</h2>
-          <p className="person-chinese">{incumbent.chineseName}</p>
-          <div className="person-meta">
-            <p>{incumbent.publicRole}</p>
-            <p>{incumbentTerm}</p>
-          </div>
-        </article>
-
-        <article className="person-secondary">
-          <p className="person-role">Founder and 1st Commissioner</p>
-          <h2>{founder.name}</h2>
-          <p className="person-chinese">{founder.chineseName}</p>
-          <div className="person-meta">
-            <p>{founder.publicRole}</p>
-            <p>{founderTerm}</p>
-          </div>
-        </article>
+      <section className={styles.section} aria-labelledby="people-commissioners">
+        <h2 id="people-commissioners">Commissioners</h2>
+        <div className={styles.prose}>
+          <p>
+            Henry Wu founded ZMBA in May 2023 and served as First Commissioner
+            until May 2025. Lucian has served as Second Commissioner since then.
+          </p>
+        </div>
+        <Commissioners />
+        <p className={styles.note}>This page lists confirmed public roles only.</p>
       </section>
-
-      <section className="privacy-note content-narrow">
-        <h2>Public roles, not private profiles.</h2>
-        <p>
-          Player evaluations, birthdays, private comments, and unapproved profile
-          details are not part of this public page.
-        </p>
-      </section>
-    </>
+    </div>
   );
 }

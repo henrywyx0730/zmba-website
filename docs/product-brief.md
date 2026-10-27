@@ -2,7 +2,7 @@
 
 ## Product definition
 
-This is the active official website of the ZhongMei Basketball Association (ZMBA), a student-led basketball association serving the Jinling High School ZhongMei community. ZMBA was founded in 2023 and remains active, generally organizing one to two major basketball events each year.
+This is the active official website of the ZhongMei Basketball Association (ZMBA), a student-led basketball association serving the Jinling High School ZMB community. ZMBA was founded in 2023 and remains active, generally organizing one to two major basketball events each year.
 
 The product is not archive-first. Historical games, documents, photographs, and leadership records belong here because they support a living organization: its current activity, continuity, and future events.
 
@@ -12,7 +12,7 @@ The product is not archive-first. Historical games, documents, photographs, and 
 - Abbreviation: ZMBA
 - Tagline: Not just a game. It's a legacy.
 - Founded: 2023
-- Community: Jinling High School ZhongMei
+- Community: Jinling High School ZMB (金陵中学中美班)
 - Official domain: https://zmbasketball.org
 - Founder and 1st Commissioner: Henry Wu / 吴昱贤
 - Incumbent Commissioner and 2nd Commissioner: Lucian / 鲁东言

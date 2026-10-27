@@ -1,0 +1,235 @@
+.page {
+  width: min(1200px, calc(100% - 80px));
+  margin-inline: auto;
+  padding-bottom: 96px;
+}
+
+.header {
+  max-width: 760px;
+  padding-top: 72px;
+  padding-bottom: 48px;
+}
+
+.backLink {
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.backLink:focus-visible,
+.contents a:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 4px;
+}
+
+.edition {
+  margin-top: 40px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.header h1 {
+  margin-top: 10px;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: clamp(2.45rem, 4vw, 3.5rem);
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  line-height: 1.13;
+}
+
+.contents {
+  max-width: 760px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding-block: 28px 30px;
+}
+
+.contents h2 {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.contents ul {
+  display: grid;
+  gap: 8px 28px;
+  margin: 18px 0 0;
+  padding: 0;
+  columns: 2;
+  list-style: none;
+}
+
+.contents li {
+  break-inside: avoid;
+  padding-left: 4px;
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
+.contents a {
+  color: var(--ink);
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.contents a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--muted);
+}
+
+.document {
+  max-width: 760px;
+  margin-top: 64px;
+  color: var(--ink);
+  font-size: 1.06rem;
+  line-height: 1.82;
+}
+
+.frontMatter {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 48px;
+}
+
+.frontMatter p + p {
+  margin-top: 10px;
+}
+
+.section {
+  scroll-margin-top: 104px;
+}
+
+.frontMatter + .section,
+.section + .section {
+  border-top: 1px solid var(--line);
+}
+
+.frontMatter + .section {
+  border-top: 0;
+}
+
+.section {
+  padding-top: 56px;
+  padding-bottom: 64px;
+}
+
+.section h2 {
+  margin: 0 0 28px;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: clamp(1.55rem, 2.4vw, 2rem);
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+.document p {
+  margin: 0;
+}
+
+.document p + p {
+  margin-top: 18px;
+}
+
+.list {
+  margin: 18px 0 0;
+  padding-left: 1.65rem;
+}
+
+.list > li + li {
+  margin-top: 18px;
+}
+
+.list > li > p + p {
+  margin-top: 7px;
+}
+
+.list .list {
+  margin-top: 10px;
+}
+
+.list .list > li + li {
+  margin-top: 9px;
+}
+
+.list .list > li > p + p {
+  margin-top: 7px;
+}
+
+.document p[lang="en"] {
+  color: var(--muted);
+}
+
+.list ul {
+  list-style-type: disc;
+}
+
+.closing {
+  border-top: 1px solid var(--line);
+  padding-top: 48px;
+  font-size: 1.12rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 1024px) {
+  .page {
+    width: calc(100% - 64px);
+  }
+}
+
+@media (max-width: 767px) {
+  .page {
+    width: calc(100% - 44px);
+    padding-bottom: 64px;
+  }
+
+  .header {
+    padding-top: 48px;
+    padding-bottom: 40px;
+  }
+
+  .edition {
+    margin-top: 30px;
+  }
+
+  .contents {
+    padding-block: 24px;
+  }
+
+  .contents ul {
+    display: grid;
+    columns: unset;
+  }
+
+  .document {
+    margin-top: 48px;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .frontMatter {
+    padding-bottom: 40px;
+  }
+
+  .section {
+    scroll-margin-top: 88px;
+    padding-top: 44px;
+    padding-bottom: 48px;
+  }
+
+  .section h2 {
+    margin-bottom: 24px;
+  }
+
+  .list {
+    padding-left: 1.35rem;
+  }
+}

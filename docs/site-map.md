@@ -8,7 +8,7 @@ The active official home: a concise introduction, verified featured activity, cu
 
 ### About
 
-What ZMBA is, its Jinling High School ZhongMei community, founding context, values, and leadership continuity.
+What ZMBA is, its Jinling High School ZMB community, founding context, values, and leadership continuity.
 
 ### Games
 

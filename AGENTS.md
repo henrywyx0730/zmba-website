@@ -2,8 +2,9 @@
 
 - This is the active official ZhongMei Basketball Association website.
 - It is not archive-first.
-- ZMBA remains an active student-led basketball association within Jinling High School ZhongMei.
+- ZMBA remains an active student-led basketball association within Jinling High School ZMB (金陵中学中美班).
 - Historical material supports the living organization rather than replacing it.
+- The official association name is ZhongMei Basketball Association (ZMBA). The official school/program identity is Jinling High School ZMB (金陵中学中美班); never substitute "Jinling ZhongMei" or "Jinling High School ZhongMei" for that formal school/program name.
 
 # Factual Integrity
 

@@ -15,8 +15,10 @@ export type Organization = WithProvenance & {
   abbreviation: string;
   tagline: string;
   foundedYear: number;
+  foundedIn: string;
   community: string;
   communityChinese: string;
+  location: readonly string[];
   officialDomain: string;
 };
 
@@ -66,14 +68,6 @@ export type EventRecord = WithProvenance & {
   media: readonly MediaAsset[];
 };
 
-export type DocumentRecord = WithProvenance & {
-  id: string;
-  title: string;
-  classification: "public-rules-candidate" | "public-code-candidate" | "internal-governance" | "private";
-  publicPublicationApproved: boolean;
-  notes: string;
-};
-
 export type SocialChannel = WithProvenance & {
   platform: "Instagram" | "Xiaohongshu" | "Douyin" | "Bilibili";
   url: string | null;
@@ -115,8 +109,17 @@ export const zmbaContent = {
     abbreviation: "ZMBA",
     tagline: "Not just a game. It's a legacy.",
     foundedYear: 2023,
-    community: "Jinling High School ZhongMei",
-    communityChinese: "金陵中美",
+    foundedIn: "May 2023",
+    community: "Jinling High School ZMB",
+    communityChinese: "金陵中学中美班",
+    location: [
+      "Jinling High School ZMB",
+      "金陵中学中美班",
+      "Xinjiekou Campus",
+      "No. 169 Zhongshan Road",
+      "Xuanwu District",
+      "Nanjing, Jiangsu, China",
+    ],
     officialDomain: "https://zmbasketball.org",
     status: "verified",
     sources: [source("project brief", "Confirmed project information")],
@@ -320,13 +323,6 @@ export const zmbaContent = {
       media: ["IMG_7108.JPG", "IMG_7180.JPG", "IMG_7183.JPG", "IMG_7185.JPG", "IMG_7232.JPG"].map((file) => ({ sourcePath: `2025.10.9/${file}`, kind: "photo" as const, publicationApproved: false, status: "review-required" as const, sources: [source(`2025.10.9/${file}`, "Original source asset")] })),
     },
   ] satisfies readonly EventRecord[],
-
-  documents: [
-    { id: "2025-26-rulebook", title: "ZMBA 25-26赛季规则手册", classification: "public-rules-candidate", publicPublicationApproved: false, notes: "Confirm current status and web-publication approval before publishing.", status: "review-required", sources: [source("ZMBA 25-26赛季规则手册.docx", "Bilingual competition rulebook")] },
-    { id: "2025-code-of-conduct", title: "ZMBA群规行为准则(2025 Edition)", classification: "public-code-candidate", publicPublicationApproved: false, notes: "Review administrative enforcement details before publishing.", status: "review-required", sources: [source("ZMBA群规行为准则(2025 Edition).docx", "Community conduct document")] },
-    { id: "2025-commissioner-handbook", title: "Handbook for ZMBA Commissioner (2025 Edition)", classification: "internal-governance", publicPublicationApproved: false, notes: "Internal governance guidance; contains sensitive account-operation material.", status: "review-required", sources: [source("Handbook for ZMBA Commissioner (2025 Edition).docx", "Internal commissioner handbook")] },
-    { id: "birthdays", title: "Birthdays.xlsx", classification: "private", publicPublicationApproved: false, notes: "Personal birthday roster; never expose in public content without explicit instruction and appropriate consent.", status: "review-required", sources: [source("Birthdays.xlsx", "Private workbook")] },
-  ] satisfies readonly DocumentRecord[],
 
   people: [
     {
